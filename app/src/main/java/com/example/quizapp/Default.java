@@ -59,6 +59,14 @@ public class Default extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_default, container, false);
+        View view = inflater.inflate(R.layout.fragment_default, container, false);
+
+        // Adjust the layout parameters of the inflated view
+        ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        view.setLayoutParams(layoutParams);
+
+        return view;
+        //return inflater.inflate(R.layout.fragment_default, container, false);
+
     }
 }

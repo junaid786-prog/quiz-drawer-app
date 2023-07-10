@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -37,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
 
         toggle.syncState();
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.contentContainer, new Default())
+                .commit();
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -44,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (id == R.id.showProfileItem){
                     System.out.println("id: profile");
+                    loadFragment(new Profile());
                 } else if (id == R.id.startQuizItem){
                     System.out.println("id: quiz");
                 } else if (id == R.id.showResultItem){
@@ -54,5 +63,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+    private void loadFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.contentContainer, fragment);
+        fragmentTransaction.commit();
     }
 }

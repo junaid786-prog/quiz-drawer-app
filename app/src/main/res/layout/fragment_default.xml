@@ -4,11 +4,13 @@
     android:id="@+id/defaultFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#AE2B2B"
     tools:context=".Default">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="fill"
         android:background="#EFE7E7"
         android:gravity="center"
         android:orientation="vertical">
