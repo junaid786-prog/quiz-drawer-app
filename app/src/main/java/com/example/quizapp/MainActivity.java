@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("id: profile");
                     loadFragment(new Profile());
                 } else if (id == R.id.startQuizItem){
+                    loadFragment(new Quiz());
                     System.out.println("id: quiz");
                 } else if (id == R.id.showResultItem){
                     System.out.println("id: result");
