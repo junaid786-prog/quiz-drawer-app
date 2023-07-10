@@ -32,5 +32,6 @@ public class Result {
                 "name='" + name + '\'' +
                 ", marks='" + marks + '\'' +
                 '}';
+
     }
 }
