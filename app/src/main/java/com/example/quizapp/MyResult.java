@@ -65,7 +65,7 @@ public class MyResult extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_my_result, container, false);
         TextView resultView = view.findViewById(R.id.myResultMarks);
-        resultView.setText(db.getLatestResult().toString());
+        resultView.setText("Last Result Was: " + db.getLatestResult().toString() + "/5");
         return view;
     }
 }

@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(new Quiz());
                     System.out.println("id: quiz");
                 } else if (id == R.id.showResultItem){
+                    loadFragment(new MyResult());
                     System.out.println("id: result");
                 }
                 drawerLayout.closeDrawer(GravityCompat.START);
