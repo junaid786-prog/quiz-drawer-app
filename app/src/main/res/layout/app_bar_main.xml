@@ -13,7 +13,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#E19898"
+            android:background="#EC4646"
 
             app:navigationIcon="@drawable/menu_icon"
             app:subtitleTextColor="#FFFFFF"
@@ -22,4 +22,5 @@
 
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/content_main"/>
 </LinearLayout>
